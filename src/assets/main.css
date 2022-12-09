@@ -1,0 +1,21 @@
+*, ::after, ::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Montserrat, serif;
+}
+
+ /*  vue Home */
+.header{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 40px
+}
+
+.header-list{
+  display: flex;
+  align-items: center;
+  gap: 57px;
+  list-style: none;
+}
