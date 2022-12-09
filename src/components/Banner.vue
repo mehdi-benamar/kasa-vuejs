@@ -6,6 +6,9 @@ export default {
     text: {
       type: String,
       default: ""
+    },
+    imagebanner: {
+      type: String
     }
   }
 }
@@ -13,8 +16,7 @@ export default {
 
 <template>
   <section class="banner">
-    <div class="banner-image">
-      <h1 class="banner-title">{{ text }}</h1>
-    </div>
+    <img :src="imagebanner" alt="image de la bannière" class="banner-image">
+    <h1 class="banner-title">{{ text }}</h1>
   </section>
 </template>
