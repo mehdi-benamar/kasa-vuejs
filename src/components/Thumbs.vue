@@ -5,18 +5,24 @@ export default {
   name: "Thumbs",
   components: {
     Thumb
+  },
+  data(){
+    return {
+      locations: []
+    }
+  },
+  async created(){
+      const response = await fetch("../src/data/logements.json")
+      const locations = await response.json() 
+      this.locations = locations
   }
 }
 </script>
 
 <template>
     <section class="thumbs">
-      <Thumb title="titre de la location" cover="https://picsum.photos/200/300"/>
-      <Thumb title="titre de la location" cover="https://picsum.photos/200/300"/>
-      <Thumb title="titre de la location" cover="https://picsum.photos/200/300"/>
-      <Thumb title="titre de la location" cover="https://picsum.photos/200/300"/>
-      <Thumb title="titre de la location" cover="https://picsum.photos/200/300"/>
-      <Thumb title="titre de la location" cover="https://picsum.photos/200/300"/>
-      <Thumb title="titre de la location" cover="https://picsum.photos/200/300"/>
+      <div class="thumb" v-for="location in locations">
+        <Thumb :location="location" />
+      </div>
     </section>
 </template>

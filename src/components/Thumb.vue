@@ -4,15 +4,12 @@
 export default {
   name: "Thumb",
   props: {
-    title: String,
-    cover: String
+    location: Object
   }
 }
 </script>
 
 <template>
-    <div class="thumb">
-      <img :src="cover" :alt="title" class="thumb-image">
-      <p class="thumb-title">{{ title }}</p>
-    </div>
+      <img :src="location.cover" :alt="location.title" class="thumb-image">
+      <p class="thumb-title">{{ location.title }}</p>
 </template>
