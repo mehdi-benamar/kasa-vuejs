@@ -1,5 +1,5 @@
 <script>
-  import Logo from "./icons/IconKasa.vue"
+  import Logo from "./icons/IconKasaHeader.vue"
 
   export default {
     name: "Header",

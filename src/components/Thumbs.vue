@@ -14,5 +14,9 @@ export default {
       <Thumb title="titre de la location" cover="https://picsum.photos/200/300"/>
       <Thumb title="titre de la location" cover="https://picsum.photos/200/300"/>
       <Thumb title="titre de la location" cover="https://picsum.photos/200/300"/>
+      <Thumb title="titre de la location" cover="https://picsum.photos/200/300"/>
+      <Thumb title="titre de la location" cover="https://picsum.photos/200/300"/>
+      <Thumb title="titre de la location" cover="https://picsum.photos/200/300"/>
+      <Thumb title="titre de la location" cover="https://picsum.photos/200/300"/>
     </section>
 </template>
