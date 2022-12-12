@@ -1,17 +1,17 @@
 <script>
   import Header from "../components/Header.vue"
-  import BannerLogement from "../components/bannerLogement.vue"
+  import BannerLog from "../components/BannerLog.vue"
 
   export default {
     name: "Logement",
     components: {
       Header,
-      BannerLogement
+      BannerLog
     }
   }
 </script>
 
 <template>
   <Header />
-  <BannerLogement />
+  <BannerLog />
 </template>

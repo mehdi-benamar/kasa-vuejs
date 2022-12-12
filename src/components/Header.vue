@@ -16,7 +16,7 @@
     </div>
     <nav class="header-nav">
       <ul class="header-list">
-        <li>Accueil</li>
+        <li><router-link :to="{name: 'home'}">Accueil</router-link></li>
         <li>A propos</li>
       </ul>
     </nav>
