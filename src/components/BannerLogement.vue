@@ -13,8 +13,8 @@ export default {
 
 <template>
     <section class="bannerLog">
-      <img src="https://picsum.photos/200/300" alt="" class="bannerLog-image">
-      <small class="bannerLog-total">1/4</small>
+      <img src="https://picsum.photos/550/415" alt="" class="bannerLog-image">
+      <small class="bannerLog-count">1/4</small>
       <LeftArrow />
       <RightArrow />
     </section>

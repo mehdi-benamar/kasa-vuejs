@@ -79,7 +79,7 @@
   border-top-right-radius: 25px;
  }
 
- /* thumb */
+ /* thumb component */
  .thumb{
   width: 340px;
   height: 340px;
@@ -128,4 +128,46 @@
   font-weight: 500;
   font-size: 24px;
   line-height: 142.6%;
+ }
+
+ /* bannerLogement component */
+ .bannerLog {
+  height: 415px;
+  margin: 30px 100px;
+  position: relative;
+}
+
+.bannerLog-image{
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  object-fit: cover;
+ }
+
+ .bannerLog-count{
+  display: block;
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  bottom: 25px;
+  width: 24px;
+  height: 32px;
+  font-weight: 500;
+  font-size: 18px;
+  color: #ffffff;
+  line-height: 25px;
+ }
+
+ .bannerLog-leftArrow, .bannerLog-rightArrow{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-40%);
+ }
+
+ .bannerLog-leftArrow{
+  left: 23px;
+ }
+
+ .bannerLog-rightArrow{
+  right: 23px;
  }
