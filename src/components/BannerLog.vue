@@ -15,10 +15,10 @@ export default {
       posDisplay: 1
     }
   },
-  async mounted(){
+  async created(){
     const response = await fetch("../src/data/logements.json")
     const locations = await response.json() 
-     this.loc = locations.find(loc => loc.id === this.$route.params.id)
+    this.loc = locations.find(loc => loc.id === this.$route.params.id)
     return this.loc
   },
 

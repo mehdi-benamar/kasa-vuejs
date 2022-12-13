@@ -176,3 +176,25 @@
  .bannerLog-rightArrow{
   right: 23px;
  }
+
+ /* component Tag */
+
+ .tag{
+    width: 115px;
+    height: 25px;
+    border-radius: 10px;
+    background-color: #FF6060;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+
+ .tag-text{
+  width: 71px;
+  height: 20px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color:#ffffff
+ }
