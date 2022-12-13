@@ -166,6 +166,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-40%);
+  cursor: pointer;
  }
 
  .bannerLog-leftArrow{

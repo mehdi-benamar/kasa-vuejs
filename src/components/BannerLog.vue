@@ -10,25 +10,50 @@ export default {
   },
   data(){
     return{
-      location: {},
-      posImage: 0
+      loc: {pictures: []},
+      posImage: 0,
+      posDisplay: 1
     }
   },
-  async created(){
+  async mounted(){
     const response = await fetch("../src/data/logements.json")
-    const locations = await response.json()  
-    this.location = locations.find(loc => loc.id === this.$route.params.id)
-    // console.log(this.location)
-    
+    const locations = await response.json() 
+     this.loc = locations.find(loc => loc.id === this.$route.params.id)
+    return this.loc
+  },
+
+  methods:{
+    next(){
+      this.posImage++
+      this.posDisplay++
+      
+      if(this.posImage === this.loc.pictures.length ){
+        this.posImage = 0
+        this.posDisplay = 1
+      }
+    },
+
+    previous(){
+      this.posImage--
+      this.posDisplay--
+      
+      if(this.posDisplay === 0){
+        this.posDisplay = this.loc.pictures.length
+      }
+
+      if(this.posImage < 0 ){
+        this.posImage = this.loc.pictures.length - 1
+      }
+    }
   }
 }
 </script>
 
 <template>
     <section class="bannerLog">
-      <img src="" alt="" class="bannerLog-image">
-      <small class="bannerLog-count">1/{{ location.pictures.length }}</small>
-      <LeftArrow />
-      <RightArrow />
+      <img :src="loc.pictures[posImage]" alt="ensemble des pièces de la location" class="bannerLog-image">
+      <small class="bannerLog-count">{{ posDisplay }}/{{ loc.pictures.length }}</small>
+      <LeftArrow @click="previous" v-if="loc.pictures.length > 1" />
+      <RightArrow @click="next" v-if="loc.pictures.length > 1" />
     </section>
 </template>
