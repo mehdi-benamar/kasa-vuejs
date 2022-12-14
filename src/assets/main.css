@@ -195,8 +195,9 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 20px;
-  text-align: center;
-  color:#ffffff
+  color:#ffffff;
+  display: flex;
+  justify-content: center;
  }
 
  /* host component */
@@ -212,7 +213,8 @@
 }
 
 .host-bottom{
-  margin-top: 20px
+  margin-top: 20px;
+  align-items: center;
 }
 
 .host-info h2, .host-info h3{
@@ -222,14 +224,14 @@
 }
 
 .host-info h2 {
-  width: 635px;
+  width: auto;
   height: 51px;
   font-size: 36px;
   line-height: 52px;
 }
 
 .host-info h3{
-  width: 76px;
+  width: auto;
   height: 26px;
   font-size: 18px;
   line-height: 25px;

@@ -8,40 +8,37 @@ export default {
     Tag,
     Rating
   },
-  // props:{
-  //   title: String,
-  //   location: String,
-
-  // }
+  props:{
+    locations: Array
+  },
+  methods: {
+    splitName(host, pos){
+      return host.split(" ")[pos]
+    }
+  }
 }
 </script>
 
 <template>
-    <section class="host">
+    <section class="host" v-for="loc in locations">
       <div class="host-info">
-        <h2>Title</h2>
-        <h3>Location</h3>
+        <h2>{{ loc.title }}</h2>
+        <h3>{{loc.location }}</h3>
       </div>
       <div class="host-profile">
         <div class="host-profile-name">
-          <p>Prénom</p>
-          <p>Nom</p>
+          <p>{{ splitName(loc.host.name, 0) }}</p>
+          <p>{{ splitName(loc.host.name, 1) }}</p>
         </div>
-        <img src="https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-12.jpg" alt="" class="host-profile-image">
+        <img :src="loc.host.picture" alt="Photo du propriétaire" class="host-profile-image">
       </div>
     </section>
-    <section class="host-bottom">
+    <section class="host-bottom" v-for="loc in locations">
       <div class="host-bottom-tags">
-        <Tag name="test"/>
-        <Tag name="test"/>
-        <Tag name="test"/>
+        <Tag v-for="name in loc.tags" :name="name" />
       </div>
       <div class="host-bottom-rating">
-        <Rating />
-        <Rating />
-        <Rating />
-        <Rating />
-        <Rating />
+        <Rating v-for="(n, i) in 5" :fill="(i + 1) > parseInt(loc.rating) ? 'none' : 'FF6060'"/>
       </div>
     </section>
 </template>
