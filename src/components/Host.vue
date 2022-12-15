@@ -39,7 +39,7 @@ export default {
           <Tag v-for="name in loc.tags" :name="name" />
         </div>
         <div class="host-bottom-rating">
-          <Rating v-for="(n, i) in 5" />
+          <Rating v-for="(n, i) in 5"  :fill="i < parseInt(loc.rating) ? '#FF6060' : '#E3E3E3' " />
         </div>
       </div>
     </section>
