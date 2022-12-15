@@ -2,13 +2,15 @@
 import Header from "../components/Header.vue"
 import BannerLog from "../components/BannerLog.vue"
 import Host from "../components/Host.vue"
+import Footer from "../components/Footer.vue"
 
 export default {
   name: "Logement",
   components: {
     Header,
     BannerLog,
-    Host
+    Host,
+    Footer
   },
   data() {
     return {
@@ -28,4 +30,5 @@ export default {
   <Header />
   <BannerLog :locations="locations" />
   <Host :locations="locations" />
+  <Footer />
 </template>

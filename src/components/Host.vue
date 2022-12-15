@@ -1,12 +1,14 @@
 <script>
 import Tag from "./Tag.vue"
 import Rating from "./icons/IconRating.vue"
+import Collapse from "./Collapse.vue"
 
 export default {
   name: "Host",
   components: {
     Tag,
-    Rating
+    Rating,
+    Collapse
   },
   props:{
     locations: Array
@@ -39,8 +41,11 @@ export default {
           <Tag v-for="name in loc.tags" :name="name" />
         </div>
         <div class="host-bottom-rating">
-          <Rating v-for="(n, i) in 5"  :fill="i < parseInt(loc.rating) ? '#FF6060' : '#E3E3E3' " />
+          <Rating v-for="(n, i) in 5"  :fill="i < parseInt(loc.rating) ? '#FF6060' : '#E3E3E3'" />
         </div>
+      </div>
+      <div class="collapse">
+        <Collapse title="Équipements" :description="loc.description"/>
       </div>
     </section>
 </template>
