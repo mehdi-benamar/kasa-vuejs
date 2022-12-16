@@ -88,7 +88,6 @@
   width: 340px;
   height: 340px;
   position: relative;
-  margin: 60;
 }
 
 .thumb-image{
@@ -267,23 +266,31 @@
   gap: 10px;
 }
 
-/* collapse component */
+/* collapse and collapse-list component */
 
 .collapse{
-  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  gap: 96px;
   margin-bottom: 14px;
+  margin-bottom: 56px;
 }
 
-.collapse-header{
+.collapseList-container, .collapse-container{
+  width: 50%;
+}
+
+.collapse-header, .collapseList-header{
   border-radius: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 13px 12px 13px 20px;
   background-color: #FF6060;
+  cursor: pointer;
 }
 
-.collapse-title{
+.collapse-title, .collapseList-title{
   font-size: 18px;
   font-weight: 500;
   line-height: 26px;
@@ -293,10 +300,9 @@
 .collapse-header svg{
   transform: rotate(0deg);
   transition: transform .2s ease-in;
-  cursor: pointer;
 }
 
-.collapse-description{
+.collapse-description, .collapseList-list{
   opacity: 1;
   height: 249px;
   width: 100%;
@@ -309,6 +315,11 @@
   font-weight: 400;
   line-height: 26px;
   transition: opacity .3s ease-out
+}
+
+.collapseList-list ul, .collapseList-list li{
+  list-style: none;
+  width: 100%;
 }
 
 .toggle-opacity{

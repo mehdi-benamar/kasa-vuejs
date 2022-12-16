@@ -2,13 +2,12 @@
 import CollapseArrow from "./icons/IconCollapseArrow.vue"
 
 export default {
-  name: "Collapse",
+  name: "CollapseList",
   components: {
     CollapseArrow
   },
   props:{
     title: String,
-    description: String
   },
   data(){
     return{
@@ -27,11 +26,17 @@ export default {
 </script>
 
 <template>
-    <div class="collapse-container">
-      <div class="collapse-header" @click="display">
-      <p class="collapse-title">{{ title }}</p>
+    <div class="collapseList-container">
+      <div class="collapseList-header" @click="display">
+      <p class="collapseList-title">{{ title }}</p>
       <CollapseArrow :style="{transform: `rotate(${degres}deg)`}"/>
     </div>
-    <div class="collapse-description" :class="opacity">{{ description }}</div>
+    <div class="collapseList-list" :class="opacity">
+      <ul>
+        <li>test</li>
+        <li>test</li>
+        <li>test</li>
+      </ul>
+    </div>
     </div>
 </template>

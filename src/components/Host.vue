@@ -2,14 +2,17 @@
 import Tag from "./Tag.vue"
 import Rating from "./icons/IconRating.vue"
 import Collapse from "./Collapse.vue"
+import CollapseList from "./CollapseList.vue"
 
 export default {
   name: "Host",
   components: {
     Tag,
     Rating,
-    Collapse
-  },
+    Collapse,
+    CollapseList,
+    CollapseList
+},
   props:{
     locations: Array
   },
@@ -45,7 +48,8 @@ export default {
         </div>
       </div>
       <div class="collapse">
-        <Collapse title="Équipements" :description="loc.description"/>
+        <Collapse title="Description" :description="loc.description"/>
+        <CollapseList title="Équipements" />
       </div>
     </section>
 </template>
