@@ -49,7 +49,7 @@ export default {
       </div>
       <div class="collapse">
         <Collapse title="Description" :description="loc.description"/>
-        <CollapseList title="Équipements" />
+        <CollapseList title="Équipements" :equipments="loc.equipments"/>
       </div>
     </section>
 </template>

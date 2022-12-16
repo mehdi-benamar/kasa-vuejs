@@ -6,17 +6,18 @@ export default {
   components: {
     CollapseArrow
   },
-  props:{
+  props: {
     title: String,
+    equipments: Array,
   },
-  data(){
-    return{
+  data() {
+    return {
       opacity: "",
       degres: "0"
     }
   },
   methods: {
-    display(){
+    display() {
       this.opacity === "" ? this.opacity = "toggle-opacity" : this.opacity = ""
       this.degres === "180" ? this.degres = "0" : this.degres = "180"
     }
@@ -26,17 +27,15 @@ export default {
 </script>
 
 <template>
-    <div class="collapseList-container">
-      <div class="collapseList-header" @click="display">
+  <div class="collapseList-container">
+    <div class="collapseList-header" @click="display">
       <p class="collapseList-title">{{ title }}</p>
-      <CollapseArrow :style="{transform: `rotate(${degres}deg)`}"/>
+      <CollapseArrow :style="{ transform: `rotate(${degres}deg)` }" />
     </div>
     <div class="collapseList-list" :class="opacity">
       <ul>
-        <li>test</li>
-        <li>test</li>
-        <li>test</li>
+        <li v-for="equipment in equipments">{{ equipment }}</li>
       </ul>
     </div>
-    </div>
+  </div>
 </template>
