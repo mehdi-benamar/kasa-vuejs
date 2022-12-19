@@ -17,7 +17,7 @@
     <nav class="header-nav">
       <ul class="header-list">
         <li><router-link :to="{name: 'home'}">Accueil</router-link></li>
-        <li>A propos</li>
+        <li><router-link :to="{name: 'about'}">A propos</router-link></li>
       </ul>
     </nav>
   </header>
