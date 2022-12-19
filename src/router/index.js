@@ -20,6 +20,10 @@ const router = createRouter({
       path: '/error-404',
       name: 'error',
       component: Error
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      redirect: "error-404"
     }
   ]
 })

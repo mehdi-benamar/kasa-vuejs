@@ -3,7 +3,6 @@ import Header from "../components/Header.vue"
 import BannerLog from "../components/BannerLog.vue"
 import Host from "../components/Host.vue"
 import Footer from "../components/Footer.vue"
-import { onMounted } from "vue"
 
 export default {
   name: "Logement",
