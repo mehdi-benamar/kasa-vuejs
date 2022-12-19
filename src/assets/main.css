@@ -393,3 +393,25 @@
   padding-top: 36px;
   padding-bottom: 19px;
 }
+
+/* css for mobile */
+@media screen and (max-width: 768px){
+  
+  /* header component */
+  
+  .header-logo svg{
+    width: 145px;
+    height: 45px;
+  }
+
+  .header-list li{
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 17px;
+  }
+  
+  /* component About */
+  .about-collapse .collapse-container{
+    width: 100%;
+  }
+}
