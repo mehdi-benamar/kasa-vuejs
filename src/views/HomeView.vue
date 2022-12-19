@@ -17,7 +17,7 @@ export default {
 <template>
     <Header />
     <main>
-      <Banner text="Chez vous, partout et ailleurs" imagebanner="./src/assets/banner.png"/>
+      <Banner text="Chez vous, partout et ailleurs" imagebanner="banner.png"/>
       <Thumbs />
     </main>
     <Footer />

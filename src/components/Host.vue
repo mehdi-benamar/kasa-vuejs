@@ -30,21 +30,21 @@ export default {
         <div class="host-info">
           <h2>{{ loc.title }}</h2>
           <h3>{{loc.location }}</h3>
+          <div class="host-bottom-tags">
+            <Tag v-for="name in loc.tags" :name="name" />
+          </div>
         </div>
         <div class="host-profile">
-          <div class="host-profile-name">
-            <p>{{ splitName(loc.host.name, 0) }}</p>
-            <p>{{ splitName(loc.host.name, 1) }}</p>
+          <div class="host-sub-profile">
+            <div class="host-profile-name">
+              <p>{{ splitName(loc.host.name, 0) }}</p>
+              <p>{{ splitName(loc.host.name, 1) }}</p>
+            </div>
+            <img :src="loc.host.picture" alt="Photo du propriétaire" class="host-profile-image" />
           </div>
-          <img :src="loc.host.picture" alt="Photo du propriétaire" class="host-profile-image">
-        </div>
-      </div>
-      <div class="host-bottom">
-        <div class="host-bottom-tags">
-          <Tag v-for="name in loc.tags" :name="name" />
-        </div>
-        <div class="host-bottom-rating">
-          <Rating v-for="(n, i) in 5"  :fill="i < parseInt(loc.rating) ? '#FF6060' : '#E3E3E3'" />
+          <div class="host-bottom-rating">
+            <Rating v-for="(n, i) in 5"  :fill="i < parseInt(loc.rating) ? '#FF6060' : '#E3E3E3'" />
+          </div>
         </div>
       </div>
       <div class="collapse">

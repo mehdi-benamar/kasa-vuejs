@@ -8,7 +8,13 @@ export default {
       default: ""
     },
     imagebanner: {
-      type: String
+      type: String,
+      default: ""
+    }
+  },
+  data(){
+    return{
+      imageSource: "./src/assets/"
     }
   }
 }
@@ -16,7 +22,7 @@ export default {
 
 <template>
   <section class="banner">
-    <img :src="imagebanner" alt="image de la bannière" class="banner-image">
+    <img :src="imageSource + imagebanner" alt="image de la bannière" class="banner-image">
     <h1 class="banner-title">{{ text }}</h1>
   </section>
 </template>
