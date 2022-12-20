@@ -396,6 +396,14 @@
 
 /* css for mobile */
 @media screen and (max-width: 768px){
+  body{
+    overflow-x: hidden;
+  }
+
+  .header, .banner, .thumbs{
+    margin-left: 20px;
+    margin-right: 20px;
+  }
   
   /* header component */
   
@@ -404,12 +412,53 @@
     height: 45px;
   }
 
+  .header-list{
+    gap: 10px
+  }
+
   .header-list li{
     font-size: 12px;
     font-weight: 500;
     line-height: 17px;
+    text-transform: uppercase;
+  }
+
+  /* banner */
+  .banner{
+    height: 111px;
+    margin-top: 16px;
+  }
+
+  .banner-title{
+    width: 217px;
+    top: 30%;
+    left: 16px;
+    transform: none;
+    font-size: 24px;
+    line-height: 24px;
   }
   
+  /* thumbs component */
+  .thumbs{
+    background-color: transparent;
+    padding: 0;
+    margin-top: 22px;
+    margin-bottom: 22px;
+    gap: 20px;
+  }
+
+  /* thumb component */
+    .thumb{
+      width: 100%;
+      height: 225px;
+    }
+
+    /* footer component */
+
+    .footer-text{
+      font-size: 12px;
+      line-height: 17px;
+    }
   /* component About */
   .about-collapse .collapse-container{
     width: 100%;
