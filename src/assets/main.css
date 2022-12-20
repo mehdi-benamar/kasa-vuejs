@@ -1,48 +1,50 @@
-*, ::after, ::before{
+*,
+::after,
+::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: Montserrat, serif;
 }
 
-#app{
+#app {
   width: 100%;
   height: 100vh;
   overflow: auto
 }
 
- /*  Composant Home */
-.header{
+/*  Composant Home */
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 40px 100px 0 100px
 }
 
-.header-list{
+.header-list {
   display: flex;
   align-items: center;
   gap: 57px;
   list-style: none;
 }
 
-.header-list li{
+.header-list li {
   font-size: 24px;
   color: #FF6060;
 }
 
-.header-list a{
+.header-list a {
   color: inherit;
   text-decoration: none;
 }
 
-.header-list a:hover{
+.header-list a:hover {
   text-decoration: underline;
 }
 
 /* Component Banner */
 
-.banner{
+.banner {
   height: 223px;
   margin: 80px 100px 0 100px;
   background-color: #000000;
@@ -51,7 +53,7 @@
   border-radius: 25px;
 }
 
-.banner-image{
+.banner-image {
   width: 100%;
   height: 100%;
   opacity: 0.8;
@@ -59,7 +61,7 @@
   object-fit: cover;
 }
 
-.banner-title{
+.banner-title {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -70,8 +72,8 @@
   color: #ffffff;
 }
 
- /* Thumbs */
- .thumbs{
+/* Thumbs */
+.thumbs {
   background: #F7F7F7;
   margin: 43px 100px 0 100px;
   display: flex;
@@ -81,23 +83,23 @@
   padding: 56px 50px;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
- }
+}
 
- /* thumb component */
- .thumb{
+/* thumb component */
+.thumb {
   width: 340px;
   height: 340px;
   position: relative;
 }
 
-.thumb-image{
+.thumb-image {
   border-radius: 10px;
   width: 100%;
   height: 100%;
   object-fit: cover;
- }
+}
 
- .thumb-title{
+.thumb-title {
   position: absolute;
   left: 20px;
   right: 20px;
@@ -105,11 +107,11 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 142.6%;
-  color:#ffffff;
- }
+  color: #ffffff;
+}
 
- /* Footer component */
- .footer{
+/* Footer component */
+.footer {
   width: 100%;
   height: 209px;
   color: #ffffff;
@@ -117,37 +119,37 @@
   display: flex;
   flex-direction: column;
   align-items: center;
- }
+}
 
- .footer svg{
+.footer svg {
   width: 122px;
   margin-top: 66px;
   margin-bottom: 29px;
- }
+}
 
- .footer-text{
+.footer-text {
   height: 46px;
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
   line-height: 142.6%;
- }
+}
 
- /* bannerLogement component */
- .bannerLog {
+/* bannerLogement component */
+.bannerLog {
   height: 415px;
   margin: 30px 100px;
   position: relative;
 }
 
-.bannerLog-image{
+.bannerLog-image {
   width: 100%;
   height: 100%;
   border-radius: 25px;
   object-fit: cover;
- }
+}
 
- .bannerLog-count{
+.bannerLog-count {
   display: block;
   position: absolute;
   left: 50%;
@@ -159,52 +161,53 @@
   font-size: 18px;
   color: #ffffff;
   line-height: 25px;
- }
+}
 
- .bannerLog-leftArrow, .bannerLog-rightArrow{
+.bannerLog-leftArrow,
+.bannerLog-rightArrow {
   position: absolute;
   top: 50%;
   transform: translateY(-40%);
   cursor: pointer;
- }
+}
 
- .bannerLog-leftArrow{
+.bannerLog-leftArrow {
   left: 23px;
- }
+}
 
- .bannerLog-rightArrow{
+.bannerLog-rightArrow {
   right: 23px;
- }
+}
 
- /* component Tag */
+/* component Tag */
 
- .tag{
-    width: 115px;
-    height: 25px;
-    border-radius: 10px;
-    background-color: #FF6060;
-    display: flex;
-    align-items: center;
-    justify-content: center;
- }
+.tag {
+  width: 115px;
+  height: 25px;
+  border-radius: 10px;
+  background-color: #FF6060;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
- .tag-text{
+.tag-text {
   width: 100%;
   height: 20px;
   font-weight: 500;
   font-size: 14px;
   line-height: 20px;
-  color:#ffffff;
+  color: #ffffff;
   text-align: center;
- }
+}
 
- /* host component */
- .host {
+/* host component */
+.host {
   display: flex;
   justify-content: space-between;
 }
 
-.host{
+.host {
   flex-direction: column;
   margin-left: 100px;
   margin-right: 100px;
@@ -212,19 +215,20 @@
   margin-bottom: 56px;
 }
 
-.host-header{
+.host-header {
   display: flex;
   justify-content: space-between;
   margin-bottom: 24px;
 }
 
-.host-info{
+.host-info {
   display: flex;
   flex-direction: column;
 
 }
 
-.host-info h2, .host-info h3{
+.host-info h2,
+.host-info h3 {
   font-weight: 500;
   color: #FF6060
 }
@@ -236,39 +240,46 @@
   line-height: 52px;
 }
 
-.host-info h3{
+.host-info h3 {
   width: auto;
   height: 26px;
   font-size: 18px;
   line-height: 25px;
 }
 
-.host-profile{
+.host-profile {
   display: flex;
   align-items: flex-end;
   flex-direction: column;
   gap: 10px;
 }
 
-.host-sub-profile{
+.host-sub-profile {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.host-profile-name{
+.host-profile-name {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
 
-.host-profile img{
+.host-profile-name p{
+  font-size: 18px;
+  line-height: 26px;
+  color: #FF6060;
+}
+
+.host-profile img {
   width: 64px;
   height: 64px;
   border-radius: 50%;
 }
 
-.host-bottom-tags, .host-bottom-rating{
+.host-bottom-tags,
+.host-bottom-rating {
   display: flex;
   gap: 10px;
   margin-top: 24px;
@@ -276,17 +287,20 @@
 
 /* collapse and collapse-list component */
 
-.collapse{
+.collapse {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   gap: 96px;
 }
 
-.collapseList-container, .collapse-container{
+.collapseList-container,
+.collapse-container {
   width: 50%;
 }
 
-.collapse-header, .collapseList-header{
+.collapse-header,
+.collapseList-header {
   border-radius: 10px;
   display: flex;
   justify-content: space-between;
@@ -297,19 +311,22 @@
   z-index: 0;
 }
 
-.collapse-title, .collapseList-title{
+.collapse-title,
+.collapseList-title {
   font-size: 18px;
   font-weight: 500;
   line-height: 26px;
   color: #FFFFFF;
 }
 
-.collapse-header svg, .collapseList-header svg{
+.collapse-header svg,
+.collapseList-header svg {
   transform: rotate(0deg);
   transition: transform .2s ease-in;
 }
 
-.collapse-description, .collapseList-list{
+.collapse-description,
+.collapseList-list {
   display: block;
   transform: translateY(0);
   height: 249px;
@@ -325,31 +342,32 @@
   transition: display .2s ease-out;
 }
 
-.collapseList-list ul, .collapseList-list li{
+.collapseList-list ul,
+.collapseList-list li {
   list-style: none;
   width: 100%;
 }
 
-.toggle-opacity{
+.toggle-opacity {
   display: none
 }
 
 /* component Error */
-.error{
+.error {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 70px;
 }
 
-.error-number{
+.error-number {
   font-size: 288px;
   font-weight: 700;
   line-height: 411px;
   color: #FF6060;
 }
 
-.error-text{
+.error-text {
   font-size: 36px;
   font-weight: 500;
   line-height: 51px;
@@ -357,23 +375,23 @@
   margin-bottom: 180px;
 }
 
-.error-link{
+.error-link {
   font-size: 18px;
   font-weight: 500;
   line-height: 26px;
 }
 
-.error-link a{
+.error-link a {
   color: #FF6060;
   text-decoration: none;
 }
 
-.error-link a:hover{
+.error-link a:hover {
   text-decoration: underline;
 }
 
 /* component About */
-.about-collapse{
+.about-collapse {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -381,55 +399,59 @@
   margin: 33px 100px 56px 100px;
 }
 
-.about-collapse .collapse-container{
+.about-collapse .collapse-container {
   width: 80%;
   font-size: 24px;
   font-weight: 400;
   line-height: 34px;
 }
 
-.about-collapse .collapse-description{
+.about-collapse .collapse-description {
   height: auto;
   padding-top: 36px;
   padding-bottom: 19px;
 }
 
 /* css for mobile */
-@media screen and (max-width: 768px){
-  body{
+@media screen and (max-width: 768px) {
+  body {
     overflow-x: hidden;
   }
 
-  .header, .banner, .thumbs{
+  .header,
+  .banner,
+  .bannerLog,
+  .thumbs,
+  .host {
     margin-left: 20px;
     margin-right: 20px;
   }
-  
+
   /* header component */
-  
-  .header-logo svg{
+
+  .header-logo svg {
     width: 145px;
     height: 45px;
   }
 
-  .header-list{
+  .header-list {
     gap: 10px
   }
 
-  .header-list li{
+  .header-list li {
     font-size: 12px;
     font-weight: 500;
     line-height: 17px;
     text-transform: uppercase;
   }
 
-  /* banner */
-  .banner{
+  /* banner component*/
+  .banner {
     height: 111px;
     margin-top: 16px;
   }
 
-  .banner-title{
+  .banner-title {
     width: 217px;
     top: 30%;
     left: 16px;
@@ -437,9 +459,33 @@
     font-size: 24px;
     line-height: 24px;
   }
-  
+
+  /* bannerLog component */
+
+  .bannerLog {
+    height: 255px;
+  }
+
+  .bannerLog-leftArrow,
+  .bannerLog-rightArrow {
+    width: 12px;
+    height: 20px;
+  }
+
+  .bannerLog-leftArrow {
+    left: 5px;
+  }
+
+  .bannerLog-rightArrow {
+    right: 5px;
+  }
+
+  .bannerLog-count {
+    display: none;
+  }
+
   /* thumbs component */
-  .thumbs{
+  .thumbs {
     background-color: transparent;
     padding: 0;
     margin-top: 22px;
@@ -448,19 +494,115 @@
   }
 
   /* thumb component */
-    .thumb{
-      width: 100%;
-      height: 225px;
-    }
+  .thumb {
+    width: 100%;
+    height: 225px;
+  }
 
-    /* footer component */
+  /* footer component */
 
-    .footer-text{
-      font-size: 12px;
-      line-height: 17px;
-    }
+  .footer-text {
+    font-size: 12px;
+    line-height: 17px;
+  }
+
+  /* host component */
+  .host {
+    margin-top: 15px;
+  }
+
+  .host-info h2 {
+    width: 100%;
+    height: auto;
+    font-size: 18px;
+    line-height: 26px;
+    margin-bottom: 5px;
+  }
+
+  .host-info h3 {
+    width: 100%;
+    height: 22px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .host-header {
+    flex-direction: column;
+  }
+
+  .host-bottom-tags {
+    margin-top: 10px;
+  }
+
+  .tag{
+    height: 18px;
+    width: 84px;
+  }
+
+  .tag-text{
+    height: 14px;
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+  .host-profile{
+    margin-top: 16px;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .host-profile-name p{
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .host-profile img{
+    width: 32px;
+    height: 32px;
+  }
+
+  .host-bottom-rating{
+    margin-top: 0;
+  }
+
+  .host-bottom-rating svg{
+    width: 15px;
+    height: 15px;
+  }
+
+  .collapse{
+    flex-direction: column;
+    gap: 20px
+  }
+
+  .collapse-container, .collapseList-container{
+    width: 100%;
+  }
+
+  .collapse-header, .collapseList-header{
+    height: 30px;
+  }
+
+  .collapse-title, .collapseList-title{
+    font-size: 13px;
+    line-height: 19px;
+  }
+
+  .collapse-header svg, .collapseList-header svg{
+    width: 9px;
+    height: 15px;
+  }
+
+  .collapse-description, .collapseList-list{
+    height: auto;
+    font-size: 12px;
+    line-height: 17px;
+    padding: 23px 6px 6px 11px
+  }
+
   /* component About */
-  .about-collapse .collapse-container{
+  .about-collapse .collapse-container {
     width: 100%;
   }
 }
