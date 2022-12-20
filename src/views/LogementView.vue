@@ -3,6 +3,7 @@ import Header from "../components/Header.vue"
 import BannerLog from "../components/BannerLog.vue"
 import Host from "../components/Host.vue"
 import Footer from "../components/Footer.vue"
+import data from "../data/logements.json"
 
 export default {
   name: "Logement",
@@ -19,9 +20,7 @@ export default {
   },
   async created() {
 
-    const response = await fetch("../src/data/logements.json")
-    const locations = await response.json()
-    const loc = locations.find(loc => loc.id === this.$route.params.id)
+    const loc = data.find(loc => loc.id === this.$route.params.id)
     this.locations.push(loc);
 
     if(!loc){
