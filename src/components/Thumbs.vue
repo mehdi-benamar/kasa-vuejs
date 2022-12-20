@@ -1,5 +1,6 @@
 <script>
 import Thumb from "./Thumb.vue"
+import data from "../data/logements.json"
 
 export default {
   name: "Thumbs",
@@ -12,9 +13,10 @@ export default {
     }
   },
   async created(){
-      const response = await fetch("../src/data/logements.json")
-      const locations = await response.json() 
-      this.locations = locations
+      data.map(({id, cover, title}) => {
+        this.locations.push({id, cover, title})
+      })
+      return this.locations
   }
 }
 </script>
